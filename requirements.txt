@@ -1,0 +1,6 @@
+streamlit
+pandas
+numpy
+altair
+firebase-admin==5.3.0
+requests==2.28.2
