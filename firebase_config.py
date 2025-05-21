@@ -7,7 +7,7 @@ import streamlit as st
 # I'm now converting st.secrets["firebase"] to a normal dictionary
 
 cred_dict = dict(st.secrets["firebase"])
-cred = credentials.Certificate(st.secrets["firebase"])
+cred = credentials.Certificate(cred_dict)
 
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://ai-for-new-students-default-rtdb.europe-west1.firebasedatabase.app',  # This is my database URL
