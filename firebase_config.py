@@ -3,6 +3,10 @@ from firebase_admin import credentials, auth, db, storage
 import streamlit as st
 
 # cred = credentials.Certificate("~/.firebase/serviceAccountKey.json")
+
+# I'm now converting st.secrets["firebase"] to a normal dictionary
+
+cred_dict = dict(st.secrets["firebase"])
 cred = credentials.Certificate(st.secrets["firebase"])
 
 firebase_admin.initialize_app(cred, {
